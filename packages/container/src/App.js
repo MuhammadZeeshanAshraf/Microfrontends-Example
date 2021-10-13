@@ -10,7 +10,7 @@ import { createBrowserHistory } from "history";
 
 const MarketingLazy = lazy(() => import("./components/MarketingApp"));
 const Authlazy = lazy(() => import("./components/AuthApp"));
-// const Dashboardlazy = lazy(() => import("./components/DashboardApp")) ;
+const Dashboardlazy = lazy(() => import("./components/DashboardApp"));
 
 const generateClassName = createGenerateClassName({
   productionPrefix: "co",
@@ -40,10 +40,10 @@ export default () => {
               <Route path="/auth">
                 <Authlazy onSignIn={() => setIsSignedIn(true)}></Authlazy>
               </Route>
-              {/* <Route path="/dashboard">
+              <Route path="/dashboard">
                 {!isSignedIn && <Redirect to="/" />}
                 <Dashboardlazy />
-              </Route> */}
+              </Route>
               <Route path="/" component={MarketingLazy} />
             </Switch>
           </Suspense>
