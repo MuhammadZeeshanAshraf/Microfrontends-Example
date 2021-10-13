@@ -5,13 +5,13 @@ on:
     branches:
       - main
     paths:
-      - "dashboard/**"
+      - ""packages/dashboard/**"
 
   workflow_dispatch:
 
 defaults:
   run:
-    working-directory: dashboard
+    working-directory: "packages/dashboard
 
 jobs:
   build:
