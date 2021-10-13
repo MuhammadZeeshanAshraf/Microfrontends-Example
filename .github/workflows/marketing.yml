@@ -5,13 +5,13 @@ on:
     branches:
       - main
     paths:
-      - "marketing/**"
+      - "packages/marketing/**"
 
   workflow_dispatch:
 
 defaults:
   run:
-    working-directory: marketing
+    working-directory: packages/marketing
 
 jobs:
   build:
