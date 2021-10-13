@@ -5,13 +5,13 @@ on:
     branches:
       - main
     paths:
-      - "auth/**"
+      - "packages/auth/**"
 
   workflow_dispatch:
 
 defaults:
   run:
-    working-directory: auth
+    working-directory: packages/auth
 
 jobs:
   build:
